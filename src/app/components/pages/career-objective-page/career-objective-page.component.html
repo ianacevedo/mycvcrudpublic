@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>DESCRIPTION</th>
+    <th>TARGET DATE</th>
+    <th>COMPLETED DATE</th>
+    <th><a routerLink="/career-new" class="addNew">+</a></th>
+  </tr>
+  <tr *ngFor="let careerObjective of careerObjectives">
+    <td>{{ careerObjective.id }}</td>
+    <td>
+      {{ careerObjective.name }}
+    </td>
+    <td>
+      {{ careerObjective.description }}
+    </td>
+    <td>
+      {{ careerObjective.targetDate }}
+    </td>
+    <td>
+      {{ careerObjective.completedDate }}
+    </td>
+    <td>
+      <button class="editBtn">Edit</button>
+      <button class="delBtn" (click)="deleteRow(careerObjective.id)">Delete</button>
+    </td>
+  </tr>
+</table>

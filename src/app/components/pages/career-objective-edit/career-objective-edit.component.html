@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="details">
+    <h2>New Career Objective</h2>
+    <form [formGroup]="careerObjectiveForm" (ngSubmit)="save()">
+      <div class="input-container">
+        <label>Name</label>
+        <div>
+          <input type="text" placeholder="Objective Name" formControlName="name">
+        </div>
+        <div class="error-list" *ngIf="formControl['name'].errors && isSubmitted">
+          <div *ngIf="formControl['name'].errors['required']">Should Not Be Empty</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <label>Description</label>
+        <div>
+          <input type="text" placeholder="Objective Description" formControlName="description">
+        </div>
+        <div class="error-list" *ngIf="formControl['description'].errors && isSubmitted">
+          <div *ngIf="formControl['description'].errors['required']">Should Not Be Empty</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <label>Target Date</label>
+        <div>
+          <input type="date" placeholder="Start Date" formControlName="targetDate">
+        </div>
+        <div class="error-list" *ngIf="formControl['targetDate'].errors && isSubmitted">
+          <div *ngIf="formControl['targetDate'].errors['required']">Should Not Be Empty</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <label>Completed Date</label>
+        <div>
+          <input type="date" placeholder="Completion Date" formControlName="completedDate">
+        </div>
+        <div class="error-list" *ngIf="formControl['completedDate'].errors && isSubmitted">
+          <div *ngIf="formControl['completedDate'].errors['required']">Should Not Be Empty</div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,18 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { CareerObjectiveNewComponent } from './components/pages/career-objective-new/career-objective-new.component';
+import { CareerObjectivePageComponent } from './components/pages/career-objective-page/career-objective-page.component';
+import { HomeComponent } from './components/pages/home/home.component';
+
+const routes: Routes = [
+  {path:'', component:HomeComponent},
+  {path:'career', component:CareerObjectivePageComponent},
+  {path:'career-new',component:CareerObjectiveNewComponent}
+];
+
+@NgModule({
+  declarations: [],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

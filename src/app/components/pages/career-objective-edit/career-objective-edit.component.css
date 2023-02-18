@@ -1,0 +1,45 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 3rem;
+  }
+
+  .details{
+    width: 28rem;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .error-list{
+    color: red;
+  }
+
+  .register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    width: 60%;
+    padding: 1rem;
+    border-bottom: solid 1px gray;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+  }
+  button {
+    background-color: green;
+    color: #FFF;
+    width:60%;
+    border:0;
+    padding:0.8rem;
+    border-radius:10px;
+    font-size: 1rem;
+  }

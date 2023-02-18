@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="details">
+    <div>
+      <label>First Name: {{ myInfo.firstName }}</label>
+    </div>
+    <div>
+      <label>Last Name: {{ myInfo.lastName }}</label>
+    </div>
+    <div>
+      <label>Address: {{ myInfo.address }}</label>
+    </div>
+    <div>
+      <label>E-Mail: {{ myInfo.email }}</label>
+    </div>
+    <div>
+      <label>Years of Experience: {{ myInfo.yearsOfExperience }}</label>
+    </div>
+    <div class="companies">
+      <table>
+        <tr>
+            <th>Company Name</th>
+            <th>Role</th>
+            <th>Started</th>
+            <th>Ended</th>
+            <th>Tech Stack</th>
+            <th>Projects</th>
+        </tr>
+        <tr *ngFor="let company of myInfo.companiesWorkedOn">
+          <td>{{ company.companyName }}</td>
+          <td>{{ company.role }}</td>
+          <td>{{ company.started }}</td>
+          <td>{{ company.ended }}</td>
+          <td>{{ company.techStack }}</td>
+          <td>{{ company.projects }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

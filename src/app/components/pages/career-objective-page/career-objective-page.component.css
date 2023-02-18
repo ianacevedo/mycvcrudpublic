@@ -1,0 +1,42 @@
+table {
+  width: 100%;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+td {
+  font-size: 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex: auto;
+}
+
+input {
+  font-size: 1.5rem;
+}
+
+.addNew {
+  color: green;
+  font-size: 1.5rem;
+  width:5rem;
+  height:2.5rem;
+  border-radius: 10px;
+  border:none;
+}
+.editBtn {
+  background-color: green;
+  color: #FFF;
+  font-size: 1.5rem;
+  width:5rem;
+  height:2.5rem;
+  border-radius: 10px 0 0 10px;
+  border:none;
+}
+.delBtn {
+  background-color: red;
+  color: #FFF;
+  font-size: 1.5rem;
+  width:5rem;
+  height:2.5rem;
+  border-radius: 0 10px 10px 0;
+  border:none;
+}
