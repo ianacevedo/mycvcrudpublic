@@ -5,7 +5,7 @@
     <th>DESCRIPTION</th>
     <th>TARGET DATE</th>
     <th>COMPLETED DATE</th>
-    <th><a routerLink="/career-new" class="addNew">+</a></th>
+    <th><a routerLink="/career/new" class="addNew">+</a></th>
   </tr>
   <tr *ngFor="let careerObjective of careerObjectives">
     <td>{{ careerObjective.id }}</td>
@@ -22,7 +22,7 @@
       {{ careerObjective.completedDate }}
     </td>
     <td>
-      <button class="editBtn">Edit</button>
+      <a routerLink="/career/{{ careerObjective.id}}" class="editBtn" >Edit</a>
       <button class="delBtn" (click)="deleteRow(careerObjective.id)">Delete</button>
     </td>
   </tr>

@@ -17,12 +17,9 @@ export class CareerObjectivePageComponent {
   }
 
   addNew() {
-    this.router.navigateByUrl('/career-new');
+    this.router.navigateByUrl('/career/new');
   }
 
-  editRow() {
-
-  }
   deleteRow(rowId:number) {
     const requiredIndex = this.careerObjectives.findIndex(el => {
       return el.id === rowId;
