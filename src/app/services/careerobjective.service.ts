@@ -13,7 +13,17 @@ export class CareerobjectiveService {
     return this.getCareerObjectiveFromLocalStorage();
   }
 
-  private getCareerObjectiveFromLocalStorage():any {
+  getById(objectiveId:number) {
+    let careerObjectives = this.getCareerObjectiveFromLocalStorage();
+    console.log(careerObjectives);
+    if (careerObjectives) {
+      return  careerObjectives.find((item) => item.id == objectiveId) as CareerObjective;
+    }
+
+    return new CareerObjective();
+  }
+
+  private getCareerObjectiveFromLocalStorage():any[] {
     const careerObjectiveJson = localStorage.getItem('Career_Objective');
     if (careerObjectiveJson) return JSON.parse(careerObjectiveJson);
     let careerObjective = [];

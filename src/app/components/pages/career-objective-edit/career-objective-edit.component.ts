@@ -33,7 +33,7 @@ export class CareerObjectiveEditComponent implements OnInit, OnChanges {
     ) {
       activatedRoute.params.subscribe((params) => {
         if(params['id']) {
-
+          this.careerObjective =  this.careerObjectiveService.getById(params['id']);
         }
 
        })
@@ -41,10 +41,10 @@ export class CareerObjectiveEditComponent implements OnInit, OnChanges {
     }
     ngOnInit(): void {
       this.careerObjectiveForm = this.formBuilder.group({
-        name: ['',Validators.required],
-        description: ['',Validators.required],
-        targetDate: ['',Validators.required],
-        completedDate: ['',Validators.required]
+        name: [this.careerObjective.name,Validators.required],
+        description: [this.careerObjective.description,Validators.required],
+        targetDate: [this.careerObjective.targetDate,Validators.required],
+        completedDate: [this.careerObjective.completedDate,Validators.required]
       });
 
     }
