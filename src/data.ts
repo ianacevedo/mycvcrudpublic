@@ -83,3 +83,13 @@ export const MyInfo:any = {
   ]
 
 }
+
+export const users: any[] = [
+  {
+    id: 1,
+    name: "Administrator",
+    email: "admin@test.com",
+    password: "12345",
+    isAdmin: true,
+  },
+];

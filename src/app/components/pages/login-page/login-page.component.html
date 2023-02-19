@@ -1,1 +1,30 @@
-<p>login-page works!</p>
+<div class="container">
+  <div class="details">
+      <h2>Login</h2>
+
+      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+        <div class="input-container">
+          <label>E-Mail</label>
+          <div>
+            <input type="text" formControlName="email">
+          </div>
+          <div class="error-list" *ngIf="formControl['email'].errors && isSubmitted">
+            <div *ngIf="formControl['email'].errors['required']">Should Not Be Empty</div>
+          </div>
+        </div>
+        <div class="input-container">
+          <label>Password</label>
+          <div>
+            <input type="password" formControlName="password">
+          </div>
+          <div class="error-list" *ngIf="formControl['password'].errors && isSubmitted">
+            <div *ngIf="formControl['password'].errors['required']">Should Not Be Empty</div>
+          </div>
+        </div>
+
+
+        <div class="button">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+  </div>
