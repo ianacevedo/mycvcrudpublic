@@ -3,14 +3,14 @@
     <a routerLink="/" class="cvlogo">My CV</a>
     <nav>
       <ul>
-        <li>
+        <li *ngIf="!isAuth">
             <a routerLink="/login">Login</a>
         </li>
-        <li>
+        <li *ngIf="isAuth">
           <a routerLink="/career">Career Objectives</a>
         </li>
-        <li>
-          <a>Logout</a>
+        <li *ngIf="isAuth">
+          <a (click)="logout()">Logout</a>
         </li>
       </ul>
     </nav>

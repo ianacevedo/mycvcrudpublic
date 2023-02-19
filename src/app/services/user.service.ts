@@ -19,7 +19,11 @@ export class UserService {
 
   login(userLogin:InterfaceUserLogin): User {
     let userRow = users.find((user) => userLogin.email === user.email && userLogin.password === user.password);
-    if (userRow) return JSON.parse(userRow) as User;
+
+    if (userRow) {
+      localStorage.setItem(USER_KEY,JSON.stringify(userRow));
+      return userRow as User;
+    }
     return new User();
   }
 
