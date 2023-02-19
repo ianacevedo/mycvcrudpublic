@@ -21,6 +21,7 @@ export class CareerObjectiveEditComponent implements OnInit, OnChanges {
   careerObjectiveForm!:FormGroup;
   isSubmitted = false;
   returnUrl = '';
+  careerObjective!:CareerObjective;
   showErrorsWhen:boolean = true;
   errorMessages:string[] = [];
 
@@ -30,7 +31,12 @@ export class CareerObjectiveEditComponent implements OnInit, OnChanges {
     private router:Router
 
     ) {
+      activatedRoute.params.subscribe((params) => {
+        if(params['id']) {
 
+        }
+
+       })
       this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'];
     }
     ngOnInit(): void {
